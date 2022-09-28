@@ -1,0 +1,51 @@
+<app-angular-navbar> </app-angular-navbar>
+<router-outlet> </router-outlet>
+
+
+
+
+<div style="text-align:center">
+<h1>
+  WELCOME TO
+</h1>
+</div>
+<div>
+  <img [src] ="image">   
+</div>
+<div style="text-align:center">
+  
+  </div>
+
+<p></p>
+
+
+<app-tdf></app-tdf>
+
+<router-outlet></router-outlet>
+ 
+
+
+<div class="parent">
+
+  <h2> Include this things every day </h2>
+  <ul>
+    <li *ngFor= "let bev of beverage "> {{bev}}</li>
+  </ul>
+
+<app-beverages [beverage]="currentBeverage" (newBeverageEvent)="addBeverage($event)"></app-beverages>
+
+</div>
+<h1> Feedback form</h1>
+
+<div class= " container">
+<input type="text" #input>
+<button (click)= "onSubmit(input)">Submit</button>
+<app-demo [value]= "inputText" *ngIf= "destroy">
+  <h4>This Feedback content {{inputText}}</h4>
+
+</app-demo>
+<br><br>
+<button (click)= "DestroyComponent()">Destroy</button>
+</div>
+
+

@@ -1,0 +1,8 @@
+<div class="child">
+<h2> Apply Feedback</h2>
+<p> Just try new things. ....... <strong>{{beverage}}</strong></p>
+<label for="beverage-input"> Add new things you have done today :</label>
+<input type="text" id="beverage-input" #newBeverage>
+<button (click)="addNewBeverage(newBeverage.value);newBeverage.value= ' '">add</button>
+
+</div>
